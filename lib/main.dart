@@ -111,7 +111,7 @@ class CategoriesPage extends StatelessWidget {
 }
 
 class MySongPage extends StatelessWidget {
-  const MySongPage({super.key});
+  const MySongPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -119,22 +119,72 @@ class MySongPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'My Songs',
           style: TextStyle(
             fontSize: 24,
             color: Colors.black,
           ),
         ),
-        iconTheme: const IconThemeData(
+        iconTheme: IconThemeData(
           color: Colors.black, // Set the back button color to black
         ),
       ),
-      body: const Center(
-        child: Text(
-          'My Song Page',
-          style: TextStyle(fontSize: 24),
-        ),
+      body: ListView.builder(
+        itemCount: 12,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            height: 80, // Set the height of each box
+            color: Colors.white, // You can set your desired color here
+            margin: EdgeInsets.symmetric(vertical: 5, horizontal: 10),
+            child: Row(
+              children: [
+                // Album Cover
+                Container(
+                  width: 80,
+                  height: 80,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage("https://example.com/album_cover.jpg"), // Replace with your album cover URL
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 10),
+                // Song and Artist Information
+                Expanded(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Song Name $index',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
+                      ),
+                      Text(
+                        'Artist Name $index',
+                        style: const TextStyle(
+                          fontSize: 14,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 10),
+                // Play Button
+                IconButton(
+                  icon: const Icon(Icons.play_circle_filled, color: Colors.black),
+                  onPressed: () {
+                  },
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
