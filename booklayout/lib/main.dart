@@ -11,12 +11,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Your Book App',
+      title: 'Book Layout App',
       theme: ThemeData(
-        // Your app's theme configurations go here
-        // For example, colorScheme, fonts, etc.
+        scaffoldBackgroundColor: Colors.black,
+        textTheme: const TextTheme(
+          bodyLarge: TextStyle(color: Colors.white),
+          bodyMedium: TextStyle(color: Colors.white),
+        ),
+        useMaterial3: true,
       ),
       home: const BookScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

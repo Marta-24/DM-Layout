@@ -19,6 +19,7 @@ class _BookScreenState extends State<BookScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TopBar(
+        isLiked: isLiked,
         onHeartPressed: () {
           setState(() {
             isLiked = !isLiked;
@@ -26,7 +27,7 @@ class _BookScreenState extends State<BookScreen> {
         },
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16),
+        padding: const EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -45,17 +46,18 @@ class _BookScreenState extends State<BookScreen> {
             ),
             const SizedBox(height: 16),
             const BookDescription(
-              title: 'The Song of Achilles',
-              description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            ),
+  title: 'The Song of Achilles',
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  textStyle: TextStyle(
+    fontFamily: 'PatrickHandSC', // Set the desired font family
+    fontSize: 16, // Set the desired font size
+    // Other text style properties...
+  ),
+),
             const SizedBox(height: 16),
             BottomButtons(
-              onReadPressed: () {
-                // Handle read button press
-              },
-              onPlayPressed: () {
-                // Handle play button press
-              },
+              onReadPressed: () {},
+              onPlayPressed: () {},
             ),
           ],
         ),

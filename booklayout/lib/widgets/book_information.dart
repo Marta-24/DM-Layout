@@ -19,23 +19,49 @@ class BookInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Image of the book
-        Image.network(
-          imageUrl,
-          width: 100,
-          height: 150,
-          fit: BoxFit.cover,
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '#trending $trending',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontFamily: 'PatrickHandSC',
+                ),
+              ),
+              Text(
+                title,
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'PatrickHandSC',
+                ),
+              ),
+              Text(
+                'by $writer\nPublished on $publishedDate',
+                style: const TextStyle(
+                  color: Colors.grey,
+                  fontSize: 16,
+                  fontFamily: 'PatrickHandSC',
+                ),
+              ),
+            ],
+          ),
         ),
-        // #Trending, Book Title, Writer, Published Date
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("#$trending Trending"),
-            Text(title, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            Text("By $writer"),
-            Text("Published: $publishedDate"),
-          ],
+
+        Align(
+          alignment: Alignment.centerRight,
+          child: Image.network(
+            imageUrl,
+            width: 180,
+            height: 280,
+            fit: BoxFit.cover,
+          ),
         ),
       ],
     );

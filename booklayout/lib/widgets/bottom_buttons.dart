@@ -17,11 +17,11 @@ class BottomButtons extends StatelessWidget {
       children: [
         ElevatedButton(
           onPressed: onReadPressed,
-          child: Text("Read Book"),
+          child: const Text("Read Book", style: TextStyle(fontFamily: 'PatrickHandSC',)),
         ),
         ElevatedButton(
           onPressed: onPlayPressed,
-          child: Text("Play Book"),
+          child: const Text("Play Book", style: TextStyle(fontFamily: 'PatrickHandSC',)),
         ),
       ],
     );

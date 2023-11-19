@@ -19,19 +19,20 @@ class Statistics extends StatelessWidget {
       children: [
         Column(
           children: [
-            Text("Reads"),
+            const Text("Reads", 
+            style: TextStyle(fontFamily: 'PatrickHandSC',)),
             Text(reads.toString()),
           ],
         ),
         Column(
           children: [
-            Text("Likes"),
+            const Text("Likes", style: TextStyle(fontFamily: 'PatrickHandSC',)),
             Text(likes.toString()),
           ],
         ),
         Column(
           children: [
-            Text("Episodes"),
+            const Text("Episodes", style: TextStyle(fontFamily: 'PatrickHandSC',)),
             Text(episodes.toString()),
           ],
         ),

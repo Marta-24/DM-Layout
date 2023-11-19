@@ -7,7 +7,7 @@ class BookDescription extends StatelessWidget {
   const BookDescription({
     Key? key,
     required this.title,
-    required this.description,
+    required this.description, required TextStyle textStyle,
   }) : super(key: key);
 
   @override
@@ -17,10 +17,10 @@ class BookDescription extends StatelessWidget {
       children: [
         Text(
           title,
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 12),
-        Text(description, style: TextStyle(fontSize: 16)),
+        Text(description, style: const TextStyle(fontSize: 16)),
       ],
     );
   }
