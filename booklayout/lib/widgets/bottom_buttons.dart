@@ -11,6 +11,7 @@ class BottomButtons extends StatelessWidget {
         OutlinedButton(
           onPressed: () {},
           style: OutlinedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20), // Adjust padding here
             backgroundColor: Colors.grey[900], // Background color
             side: const BorderSide(color: Colors.white),
           ),
@@ -22,8 +23,9 @@ class BottomButtons extends StatelessWidget {
         OutlinedButton(
           onPressed: () {},
           style: OutlinedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20), // Adjust padding here
             backgroundColor: Colors.white, // Background color
-            side: BorderSide(color: Colors.grey),
+            side: const BorderSide(color: Colors.grey),
           ),
           child: Text(
             "Play Book",
