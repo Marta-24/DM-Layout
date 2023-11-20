@@ -16,7 +16,9 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('Book Detail'),
+      backgroundColor: Colors.grey[900],
+      title: const Text('Book Detail',
+      style: TextStyle(color: Colors.white)),
       centerTitle: true,
       actions: [
         IconButton(

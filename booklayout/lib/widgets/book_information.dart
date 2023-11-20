@@ -28,7 +28,7 @@ class BookInformation extends StatelessWidget {
               Text(
                 '#$trending On Trending',
                 style: const TextStyle(
-                  color: Colors.white,
+                  color: Colors.blue,
                   fontSize: 16,
                 ),
               ),
@@ -36,12 +36,12 @@ class BookInformation extends StatelessWidget {
                 title,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                 ),
               ),
               Text(
-                'by $writer\nPublished on $publishedDate',
+                'by $writer\nPublished $publishedDate',
                 style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 16,
