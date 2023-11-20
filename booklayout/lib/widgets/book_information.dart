@@ -30,7 +30,6 @@ class BookInformation extends StatelessWidget {
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
-                  fontFamily: 'PatrickHandSC',
                 ),
               ),
               Text(
@@ -39,7 +38,6 @@ class BookInformation extends StatelessWidget {
                   color: Colors.white,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  fontFamily: 'PatrickHandSC',
                 ),
               ),
               Text(
@@ -47,7 +45,6 @@ class BookInformation extends StatelessWidget {
                 style: const TextStyle(
                   color: Colors.grey,
                   fontSize: 16,
-                  fontFamily: 'PatrickHandSC',
                 ),
               ),
             ],

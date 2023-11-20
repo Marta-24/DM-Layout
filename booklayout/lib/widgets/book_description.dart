@@ -17,7 +17,7 @@ class BookDescription extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 12),
         Text(description, style: const TextStyle(fontSize: 16)),

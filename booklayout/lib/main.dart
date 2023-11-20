@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Book Layout App',
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black,
+        fontFamily: 'PatrickHandSC',
+        scaffoldBackgroundColor: Colors.grey[900],
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.white),
           bodyMedium: TextStyle(color: Colors.white),

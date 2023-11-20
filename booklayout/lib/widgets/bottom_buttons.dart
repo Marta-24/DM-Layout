@@ -1,27 +1,34 @@
 import 'package:flutter/material.dart';
 
 class BottomButtons extends StatelessWidget {
-  final VoidCallback onReadPressed;
-  final VoidCallback onPlayPressed;
-
-  const BottomButtons({
-    Key? key,
-    required this.onReadPressed,
-    required this.onPlayPressed,
-  }) : super(key: key);
+  const BottomButtons({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        ElevatedButton(
-          onPressed: onReadPressed,
-          child: const Text("Read Book", style: TextStyle(fontFamily: 'PatrickHandSC',)),
+        OutlinedButton(
+          onPressed: () {},
+          style: OutlinedButton.styleFrom(
+            backgroundColor: Colors.grey[900], // Background color
+            side: const BorderSide(color: Colors.white),
+          ),
+          child: const Text(
+            "Read Book",
+            style: TextStyle(color: Colors.white), // Text color
+          ),
         ),
-        ElevatedButton(
-          onPressed: onPlayPressed,
-          child: const Text("Play Book", style: TextStyle(fontFamily: 'PatrickHandSC',)),
+        OutlinedButton(
+          onPressed: () {},
+          style: OutlinedButton.styleFrom(
+            backgroundColor: Colors.white, // Background color
+            side: BorderSide(color: Colors.grey),
+          ),
+          child: Text(
+            "Play Book",
+            style: TextStyle(color: Colors.grey[900]), // Text color
+          ),
         ),
       ],
     );

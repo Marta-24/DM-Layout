@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final bool isLiked;
-  final void Function() onHeartPressed;
+  final VoidCallback onHeartPressed;
 
   const TopBar({
     Key? key,
@@ -16,13 +16,13 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text('Book Detail', style: TextStyle(fontFamily: 'PatrickHandSC',)),
+      title: const Text('Book Detail'),
       centerTitle: true,
       actions: [
         IconButton(
           icon: Icon(
-            Icons.favorite,
-            color: isLiked ? Colors.red : Colors.grey,
+            isLiked ? Icons.favorite : Icons.favorite_border,
+            color: isLiked ? Colors.red : null,
           ),
           onPressed: onHeartPressed,
         ),
