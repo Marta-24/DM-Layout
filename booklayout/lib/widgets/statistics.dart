@@ -27,27 +27,37 @@ class Statistics extends StatelessWidget {
   }
 
   Widget _buildStat({required String title, required int value}) {
-    return Column(
-      children: [
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 16,
-            color: Colors.white,
-          ),
-        ),
-        const SizedBox(height: 4),
-        Text(
-          value.toString(),
-          style: const TextStyle(
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-        ),
-      ],
-    );
+  String displayValue;
+
+  if (value >= 1000000) {
+    displayValue = '${(value / 1000000).toStringAsFixed(1)}M';
+  } else if (value >= 1000) {
+    displayValue = '${(value / 1000).toStringAsFixed(1)}K';
+  } else {
+    displayValue = value.toString();
   }
+
+  return Column(
+    children: [
+      Text(
+        title,
+        style: const TextStyle(
+          fontSize: 16,
+          color: Colors.white,
+        ),
+      ),
+      const SizedBox(height: 4),
+      Text(
+        displayValue,
+        style: const TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
+          color: Colors.white,
+        ),
+      ),
+    ],
+  );
+}
 
   Widget _buildVerticalLine() {
     return Container(

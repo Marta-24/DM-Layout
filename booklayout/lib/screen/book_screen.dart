@@ -26,26 +26,26 @@ class _BookScreenState extends State<BookScreen> {
           });
         },
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16),
+      body: const SingleChildScrollView(
+        padding: EdgeInsets.all(16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const BookInformation(
+            BookInformation(
               imageUrl: 'https://m.media-amazon.com/images/I/81msb6gUBTL._AC_UF1000,1000_QL80_.jpg',
-              trending: '1',
+              trending: '3',
               title: 'The Song of Achilles',
               writer: 'Madeline Miller',
-              publishedDate: 'Jan 1, 2023',
+              publishedDate: 'August 28th 2012',
             ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             Statistics(
-              reads: 100,
-              likes: isLiked ? 101 : 100,
-              episodes: 20,
+              reads: 5100000,
+              likes: 37600,
+              episodes: 25,
             ),
-            const SizedBox(height: 16),
-            const BookDescription(
+            SizedBox(height: 16),
+            BookDescription(
   title: 'The Song of Achilles',
   description: '''
   Achilles, ''the best of all the Greeks,'' son of the cruel sea goddess Thetis and the legendary king Peleus, is strong, swift, and beautiful, irresistible to all who meet him. Patroclus is an awkward young prince, exiled from his homeland after an act of shocking violence. Brought together by chance, they forge an inseparable bond, despite risking the gods' wrath.
@@ -55,7 +55,7 @@ They are trained by the centaur Chiron in the arts of war and medicine, but when
     fontSize: 14,
   ),
 ),
-            const SizedBox(height: 16),
+            SizedBox(height: 16),
             BottomButtons(),
           ],
         ),

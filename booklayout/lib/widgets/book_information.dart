@@ -26,7 +26,7 @@ class BookInformation extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '#trending $trending',
+                '#$trending On Trending',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 16,
