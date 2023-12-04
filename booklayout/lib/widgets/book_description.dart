@@ -7,7 +7,8 @@ class BookDescription extends StatelessWidget {
   const BookDescription({
     Key? key,
     required this.title,
-    required this.description, required TextStyle textStyle,
+    required this.description,
+    required TextStyle textStyle,
   }) : super(key: key);
 
   @override

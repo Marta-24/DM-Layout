@@ -50,7 +50,6 @@ class BookInformation extends StatelessWidget {
             ],
           ),
         ),
-
         Align(
           alignment: Alignment.centerRight,
           child: Image.network(
